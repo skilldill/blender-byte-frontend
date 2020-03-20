@@ -13,11 +13,12 @@
     "react-redux": "7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
-    "redux-action": "1.2.2"
+    "redux": "^4.0.5",
+    "redux-actions": "2.6.5"
   },
   "devDependencies": {
     "gh-pages": "2.2.0",
-    "redux-devtools": "3.5.0",
+    "redux-devtools-extension": "^2.13.8",
     "sass-node": "^4.11.2"
   },
   "scripts": {

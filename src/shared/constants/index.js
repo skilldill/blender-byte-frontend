@@ -6,3 +6,13 @@ export const ROUTER_URLS = {
     CONTACTS: "/contacts",
     BASKET: "/basket"
 }
+
+export const API_URLS = {
+    BASE_URL: "/api",
+    BOOKS: "/books"
+}
+
+export const LOADING_SATUSES = {
+    LOADING: "LOADING",
+    NONE: "NONE"
+}
