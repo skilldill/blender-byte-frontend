@@ -42,7 +42,7 @@ function BaseHeaderContent(props) {
 }
 
 export function Header(props) {
-    const { title, children } = props;
+    const { title, children, component } = props;
     const [mousePosition, setMousePosition] = useState(null);
 
     function handleMouseMove(event) {
@@ -55,14 +55,19 @@ export function Header(props) {
         >
             <h1 className="title">{title}</h1>
             {children ? children : <BaseHeaderContent mousePosition={mousePosition} />}
+            {component && (
+                <div className="component_container">
+                    {component}
+                </div>
+            )}
         </header>
     )
 }
 
 Header.propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    component: PropTypes.any
 }
-
 BaseHeaderContent.propTypes = {
     mousePosition: PropTypes.object
 }

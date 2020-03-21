@@ -4,6 +4,8 @@
     height: 500px;
     background-color: #f1faff;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 
     .title {
         z-index: 100;
@@ -64,5 +66,13 @@
             width: 80px;
             opacity: .8;
         }
+    }
+
+    .component_container {
+        width: 600px;
+        height: 100px;
+        background-color: white;
+        position: absolute;
+        bottom: 60px;
     }
 }
