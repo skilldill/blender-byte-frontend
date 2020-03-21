@@ -4,6 +4,7 @@ import "./style.scss";
 import { SideMenu } from "../SideMenu";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
+import { CookieModal } from "../CoockieModal";
 
 export function BaseContainer({ children }) {
     return (
@@ -15,6 +16,7 @@ export function BaseContainer({ children }) {
                 { children }
                 <Footer />
             </div>
+            <CookieModal />
         </div>
     )
 }
