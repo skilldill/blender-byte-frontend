@@ -12,7 +12,6 @@ export function BaseContainer({ children }) {
                 <SideMenu />
             </div>
             <div className="content_container">
-                <Header />
                 { children }
                 <Footer />
             </div>

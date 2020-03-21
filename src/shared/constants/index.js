@@ -16,3 +16,9 @@ export const LOADING_SATUSES = {
     LOADING: "LOADING",
     NONE: "NONE"
 }
+
+export const TRANSLATE_LAYERS_COEFFS = {
+    FRONT: -0.03,
+    MIDDLE: -0.01,
+    BACK: -0.009
+}
