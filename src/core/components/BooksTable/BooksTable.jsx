@@ -27,14 +27,30 @@ function MockBook() {
     )
 }
 
-function BookCard({book}) {
+function BookCard(props) {
+    const {book, onAddBascket} = props;
     const [loadedData, setLoadedData] = useState(false);
     const { Meta } = Card;
+
+    function handleClick() {
+        const userBascket = localStorage.getItem("basket");
+        if (userBascket) {
+            const bascketBooks = JSON.parse(userBascket);
+            bascketBooks.push(book);
+            onAddBascket && onAddBascket(bascketBooks);
+            localStorage.setItem("basket", JSON.stringify(bascketBooks));
+        } else {
+            onAddBascket && onAddBascket([book]);
+            localStorage.setItem("basket", JSON.stringify([book]));
+        }
+        
+    }
 
     return (
         <Card
             hoverable
             style={{ width: 240, margin: 20 }}
+            onClick={handleClick}
             cover={
                 <div style={{ overflow: "hidden", height: "330px" }}>
                     <img 
@@ -55,7 +71,8 @@ function BookCard({book}) {
 }
 
 BookCard.propTypes = {
-    book: PropTypes.object
+    book: PropTypes.object,
+    onAddBascket: PropTypes.func
 }
 
 function LoadingBookTable() {
@@ -73,14 +90,14 @@ function LoadingBookTable() {
 }
 
 export function BooksTable(props) {
-    const { books, loading } = props;
+    const { books, loading, updateBascket } = props;
 
     function renderBooks() {
         if (books && books.length) {
             return (
                 <div className="books_blocks">
                     { books.map((book, i) => 
-                        <BookCard key={i} book={book} />
+                        <BookCard key={i} book={book} onAddBascket={updateBascket} />
                     ) }
                 </div>
             )
