@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/blender-byte-frontend/static/css/main.4a4b33c9.chunk.css",
+    "main.js": "/blender-byte-frontend/static/js/main.62fda5c5.chunk.js",
+    "main.js.map": "/blender-byte-frontend/static/js/main.62fda5c5.chunk.js.map",
+    "runtime-main.js": "/blender-byte-frontend/static/js/runtime-main.69d41389.js",
+    "runtime-main.js.map": "/blender-byte-frontend/static/js/runtime-main.69d41389.js.map",
+    "static/css/2.4b6e3ef2.chunk.css": "/blender-byte-frontend/static/css/2.4b6e3ef2.chunk.css",
+    "static/js/2.c13eec14.chunk.js": "/blender-byte-frontend/static/js/2.c13eec14.chunk.js",
+    "static/js/2.c13eec14.chunk.js.map": "/blender-byte-frontend/static/js/2.c13eec14.chunk.js.map",
+    "index.html": "/blender-byte-frontend/index.html",
+    "precache-manifest.5388fad0f407f8db81a37971fb882db0.js": "/blender-byte-frontend/precache-manifest.5388fad0f407f8db81a37971fb882db0.js",
+    "service-worker.js": "/blender-byte-frontend/service-worker.js",
+    "static/css/2.4b6e3ef2.chunk.css.map": "/blender-byte-frontend/static/css/2.4b6e3ef2.chunk.css.map",
+    "static/css/main.4a4b33c9.chunk.css.map": "/blender-byte-frontend/static/css/main.4a4b33c9.chunk.css.map",
+    "static/js/2.c13eec14.chunk.js.LICENSE.txt": "/blender-byte-frontend/static/js/2.c13eec14.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69d41389.js",
+    "static/css/2.4b6e3ef2.chunk.css",
+    "static/js/2.c13eec14.chunk.js",
+    "static/css/main.4a4b33c9.chunk.css",
+    "static/js/main.62fda5c5.chunk.js"
+  ]
+}
