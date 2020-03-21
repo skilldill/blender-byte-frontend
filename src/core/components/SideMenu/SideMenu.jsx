@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import "./style.scss";
 import { ROUTER_URLS } from "../../../shared/constants";
+import logo from "../../../assets/logo.svg";
 
 function CustomLink(props) {
     const {to, children} = props;
@@ -29,6 +30,13 @@ export function SideMenu() {
     return (
         <div className="side_menu">
             <nav>
+                <div className="logo">
+                    <img 
+                        src={logo}
+                        alt="квадратная скобка, красная запятая, квадратная скобка"
+                        width={40}
+                    />
+                </div>
                 <ul className="menu_items">
                     <li className="menu_item">
                         <CustomLink to={ROUTER_URLS.MAIN}>

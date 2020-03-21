@@ -35,7 +35,7 @@ function BaseHeaderContent(props) {
             <div className="header_figure rectangle" style={styleRectangle}></div>
             <div className="header_figure big_circle" style={styleBigCircle}></div>
             <div className="header_figure logo" style={styleLogo}>
-                <img src={logo} alt="квадратная скобка, красная запятая, квадратная скобка"/>
+                <img src={logo} alt="квадратная скобка, красная запятая, квадратная скобка" />
             </div>
         </>
     )

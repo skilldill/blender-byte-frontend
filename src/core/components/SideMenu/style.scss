@@ -11,10 +11,13 @@
         width: 100%;
     }
 
+    .logo {
+        padding: 20px;
+    }
+
     .menu_item {
         list-style-type: none;
         
-
         a {
             display: flex;
             align-items: center;
