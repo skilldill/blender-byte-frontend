@@ -1,6 +1,11 @@
 .books_table {
-    
+
     .books_loading {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .books_blocks {
         display: flex;
         flex-wrap: wrap;
     }

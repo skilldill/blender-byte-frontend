@@ -1,6 +1,7 @@
 import { createAction } from "redux-actions";
 import { api } from "../../../shared/http";
 import { LOADING_SATUSES } from "../../../shared/constants";
+import { booksActions } from "../books";
 
 class CategoriesActions {
     prefix = "CATEGORIES";
@@ -18,6 +19,10 @@ class CategoriesActions {
         try {
             const response = await api.getTypes();
             dispatch(this.setCategories(response.data));
+
+            // TODO: необходимо для показа первых изображений, но потом нужно убрать
+            const rendomCategoryId = response.data[0].id;
+            dispatch(booksActions.fetchBooks(rendomCategoryId));
         } catch(error) {
             console.log(error.message);
         } finally {

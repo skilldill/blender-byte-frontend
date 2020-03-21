@@ -3,7 +3,7 @@ import "./style.scss";
 
 import { Header } from "../../components/Header";
 import { SearchForm } from "../../components/SearchForm";
-import { CategoriesContainer } from "../../containers";
+import { CategoriesContainer, BooksTableContainer } from "../../containers";
 import { BooksTable } from "../../components/BooksTable";
 
 export function Shop() {
@@ -11,7 +11,7 @@ export function Shop() {
         <div className="shop">
             <Header title="Книги" />
             <CategoriesContainer />
-            <BooksTable />
+            <BooksTableContainer />
         </div>
     )
 }

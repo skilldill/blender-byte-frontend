@@ -20,6 +20,11 @@ class Api {
         const query = API_URLS.COUNT_BOOKS.replace(":id", typeId);
         return httpClient.get(query);
     }
+
+    getBooks(typeId) {
+        const query = API_URLS.BOOKS.replace(":id", typeId);
+        return httpClient.get(query);
+    }
 }
 
 export const api = new Api();

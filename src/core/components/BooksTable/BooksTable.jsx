@@ -26,6 +26,26 @@ function MockBook() {
     )
 }
 
+function BookCard({book}) {
+    const { Meta } = Card;
+
+    return (
+        <Card
+            hoverable
+            style={{ width: 240, margin: 20 }}
+            cover={
+                <img src={book.Photo} alt="книга" />
+            }
+        >
+            <Meta title={book.FullName} description={book.Author} />
+        </Card>
+    )
+}
+
+BookCard.propTypes = {
+    book: PropTypes.object
+}
+
 function LoadingBookTable() {
     return (
         <div className="books_loading">
@@ -40,10 +60,29 @@ function LoadingBookTable() {
     )
 }
 
-export function BooksTable() {
+export function BooksTable(props) {
+    const { books, loading } = props;
+
+    function renderBooks() {
+        if (books && books.length) {
+            return (
+                <div className="books_blocks">
+                    { books.map((book, i) => 
+                        <BookCard key={i} book={book} />
+                    ) }
+                </div>
+            )
+        }
+        return null;
+    }
+
     return (
         <div className="books_table">
-            <LoadingBookTable />
+            {
+                loading ?
+                <LoadingBookTable /> :
+                renderBooks()
+            }
         </div>
     )
 }

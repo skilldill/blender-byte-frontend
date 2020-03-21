@@ -11,6 +11,7 @@ export const API_URLS = {
     BASE_URL: process.env.REACT_APP_BASE_API_URL,
     TYPES: "/types/",
     BOOKS_IDS: "/types/:id/",
+    BOOKS: "/types/:id/books/",
     BOOK: "/books/:id/",
     COUNT_BOOKS: "/types/:id/count/"
 }
