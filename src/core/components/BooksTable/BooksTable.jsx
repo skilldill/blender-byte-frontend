@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Card, Skeleton } from "antd";
+import { Card, Skeleton, Button } from "antd";
+import { ShoppingOutlined } from "@ant-design/icons"
 
 import bookMock from "../../../assets/book_mock.png";
 import "./style.scss";
@@ -35,14 +36,20 @@ function BookCard({book}) {
             hoverable
             style={{ width: 240, margin: 20 }}
             cover={
-                <img 
-                    src={!loadedData ? bookMock : book.Photo} 
-                    alt="книга" 
-                    onLoad={() => setLoadedData(true)}
-                />
+                <div style={{ overflow: "hidden", height: "330px" }}>
+                    <img 
+                        src={!loadedData ? bookMock : book.Photo} 
+                        alt="книга" 
+                        width={240}
+                        onLoad={() => setLoadedData(true)}
+                    />
+                </div>
             }
         >
             <Meta title={book.FullName} description={book.Author} />
+            <div style={{ display: "flex", marginTop: "5px", justifyContent: "flex-end" }}>
+                <Button type="primary" shape="circle" icon={<ShoppingOutlined />} size="middle" />
+            </div>
         </Card>
     )
 }
