@@ -10,8 +10,8 @@ export function CookieModal(props) {
     const { onAccept } = props;
 
     function handleAccept() {
-        // TODO: сделать проверку согласен ли пользователь с cookie
         onAccept && onAccept();
+        localStorage.setItem("acceptCookie", "true");
         setIsShow(false);
     }
 
