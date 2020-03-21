@@ -1,6 +1,6 @@
 export const ROUTER_URLS = {
     BASE_URL: process.env.REACT_APP_BASE_ROUTE_URL,
-    MAIN: "/",
+    MAIN: "/main",
     SHOP: "/shop",
     BOOK: "/book",
     CONTACTS: "/contacts",
@@ -15,4 +15,10 @@ export const API_URLS = {
 export const LOADING_SATUSES = {
     LOADING: "LOADING",
     NONE: "NONE"
+}
+
+export const TRANSLATE_LAYERS_COEFFS = {
+    FRONT: -0.03,
+    MIDDLE: -0.01,
+    BACK: -0.009
 }

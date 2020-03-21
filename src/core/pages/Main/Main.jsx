@@ -1,10 +1,12 @@
 import React from "react";
 import "./style.scss";
 
+import { Header } from "../../components/Header";
+
 export function Main() {
     return (
         <div className="main">
-            <h1>Главная</h1>
+            <Header title="Главная" />
         </div>
     )
 }
