@@ -7,7 +7,7 @@ import "./style.scss";
 const MAX_COUNT_RENDER = 10;
 
 function LoadingCategories() {
-    const styleSceleton = { width: "200px", margin: "5px" }
+    const styleSceleton = { width: "200px", margin: "5px", borderRadius: "50px"}
 
     return (
         <div className="loading_categories">
@@ -45,13 +45,14 @@ export function Categories(props) {
                 <div className="categories_list">
                     {
                         categoriesForRender.map((category, i) =>
-                            <Button key={`${i}-${category.id}`} size="large" type="primary">
+                            <Button shape="round" key={`${i}-${category.id}`} size="large" type="primary">
                                 {category.name}
                             </Button>
                         )
                     }
                     {!showAll &&
                         (<Button 
+                            shape="round"
                             size="large"
                             type="primary"
                             onClick={() => setShowAll(true)}
@@ -61,6 +62,7 @@ export function Categories(props) {
                     }
                     {showAll &&
                         (<Button 
+                            shape="round"
                             size="large"
                             type="default"
                             onClick={() => setShowAll(false)}
