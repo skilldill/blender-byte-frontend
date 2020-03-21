@@ -1,6 +1,6 @@
 export const ROUTER_URLS = {
     BASE_URL: process.env.REACT_APP_BASE_ROUTE_URL,
-    MAIN: "/",
+    MAIN: "/main",
     SHOP: "/shop",
     BOOK: "/book",
     CONTACTS: "/contacts",

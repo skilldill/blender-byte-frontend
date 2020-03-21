@@ -8,8 +8,6 @@ import { TRANSLATE_LAYERS_COEFFS } from "../../../shared/constants";
 function BaseHeaderContent(props) {
     const { mousePosition } = props;
 
-    console.log(mousePosition);
-
     const styleCircle = mousePosition && {
         transform: `translateY(${mousePosition.x * TRANSLATE_LAYERS_COEFFS.MIDDLE}px)`
     };

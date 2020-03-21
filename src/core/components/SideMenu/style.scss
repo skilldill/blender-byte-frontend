@@ -1,3 +1,54 @@
 .side_menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .menu_items {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .menu_item {
+        list-style-type: none;
+        
+
+        a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            font-size: 20px;
+            height: 70px;
+            font-weight: 300;
+            color: rgb(19, 36, 50);
+            transition: all .3s;
+
+            .inner_link {
+                position: absolute;
+                height: 70px;
+                width: 400px;
+                bottom: -80px;
+                left: 0;
+                transition: all .3s;
+                background-color: #f1faff;
+            }
+
+            span {
+                z-index: 2;
+                position: absolute;
+                left: 20px;
+            }
+        }
+
+        .active_link {
+            background-color: #f1faff;
+        }
+    }
+
     
+
 }

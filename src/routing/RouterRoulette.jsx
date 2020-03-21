@@ -12,6 +12,9 @@ export function RouteRoulette() {
     
     <Router basename={ROUTER_URLS.BASE_URL}>
       <BaseContainer>
+        <Route exact path="/">
+          <Redirect to={ROUTER_URLS.MAIN} />
+        </Route>
         <Switch>
           { routes.map((route, i) => 
             <Route key={i} {...route} />
