@@ -1,0 +1,27 @@
+.cookie {
+    position: fixed;
+    align-items: center;
+    width: 600px;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
+    border-radius: 5px;
+    transition: all .3s;
+
+    img {
+        width: 40px;
+        margin-right: 20px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 13px;
+    }
+}
+
+.hide {
+    right: -650px;
+}
