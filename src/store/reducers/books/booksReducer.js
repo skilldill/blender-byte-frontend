@@ -2,7 +2,7 @@ import { handleActions } from "redux-actions";
 import { booksActions } from "../../actions";
 
 const initialState = {
-    books: []
+    books: [],
 }
 
 const mapReducer = {

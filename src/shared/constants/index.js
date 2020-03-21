@@ -8,8 +8,11 @@ export const ROUTER_URLS = {
 }
 
 export const API_URLS = {
-    BASE_URL: "/api",
-    BOOKS: "/books"
+    BASE_URL: process.env.REACT_APP_BASE_API_URL,
+    TYPES: "/types/",
+    BOOKS_IDS: "/types/:id/",
+    BOOK: "/books/:id/",
+    COUNT_BOOKS: "/types/:id/count/"
 }
 
 export const LOADING_SATUSES = {
