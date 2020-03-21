@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Card, Skeleton } from "antd";
 
@@ -27,6 +27,7 @@ function MockBook() {
 }
 
 function BookCard({book}) {
+    const [loadedData, setLoadedData] = useState(false);
     const { Meta } = Card;
 
     return (
@@ -34,7 +35,11 @@ function BookCard({book}) {
             hoverable
             style={{ width: 240, margin: 20 }}
             cover={
-                <img src={book.Photo} alt="книга" />
+                <img 
+                    src={!loadedData ? bookMock : book.Photo} 
+                    alt="книга" 
+                    onLoad={() => setLoadedData(true)}
+                />
             }
         >
             <Meta title={book.FullName} description={book.Author} />
