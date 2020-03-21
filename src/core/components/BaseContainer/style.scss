@@ -1,0 +1,14 @@
+.base_container {
+    display: flex;
+    max-width: 1560px;
+    min-width: 1100px;
+
+    .menu_container {
+        width: 19%;
+    }
+
+    .content_container {
+        width: 81%;
+        min-width: 800px;
+    }
+}
