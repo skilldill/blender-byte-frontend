@@ -1,0 +1,22 @@
+.categories {
+    margin-top: 50px;
+
+    .loading_categories {
+        display: flex;
+        flex-wrap: wrap;
+
+        .skeleton {
+            width: 200px;
+            margin: 5px;
+        }
+    }
+
+    .categories_list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .ant-btn-lg {
+            margin: 5px;
+        }
+    }
+}

@@ -17,7 +17,7 @@ class CategoriesActions {
         
         try {
             const response = await api.getTypes();
-            dispatch(this.setCategories(response));
+            dispatch(this.setCategories(response.data));
         } catch(error) {
             console.log(error.message);
         } finally {
