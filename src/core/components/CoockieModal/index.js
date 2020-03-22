@@ -1,0 +1,1 @@
+export { CookieModal } from "./CookieModal";

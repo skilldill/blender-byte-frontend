@@ -12,11 +12,37 @@ class BooksActions {
     setLoadingStatus = createAction(this.SET_LOADING_STATUS);
     setErrorMessage = createAction(this.SET_ERROR_MESSAGE);
 
-    fetchBooks = () => async (dispatch) => {
+    fetchBooks = (categoryId) => async (dispatch) => {
         dispatch(this.setLoadingStatus(LOADING_SATUSES.LOADING));
         
         try {
-            const response = await api.getBooks();
+            const response = await api.getBooks(categoryId);
+            dispatch(this.setBooks(response.data));
+        } catch(error) {
+            dispatch(this.setErrorMessage(error.message));
+        } finally {
+            dispatch(this.setLoadingStatus(LOADING_SATUSES.NONE));
+        }
+    }
+
+    fetchBooksByQuery = (query) => async (dispatch) => {
+        dispatch(this.setLoadingStatus(LOADING_SATUSES.LOADING));
+        
+        try {
+            const response = await api.findByWord(query);
+            dispatch(this.setBooks(response.data));
+        } catch(error) {
+            dispatch(this.setErrorMessage(error.message));
+        } finally {
+            dispatch(this.setLoadingStatus(LOADING_SATUSES.NONE));
+        }
+    }
+
+    fetchBooksByTag = (tag) => async (dispatch) => {
+        dispatch(this.setLoadingStatus(LOADING_SATUSES.LOADING));
+        
+        try {
+            const response = await api.findByTag(tag);
             dispatch(this.setBooks(response.data));
         } catch(error) {
             dispatch(this.setErrorMessage(error.message));

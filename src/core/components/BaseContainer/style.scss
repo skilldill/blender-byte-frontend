@@ -1,8 +1,10 @@
 .base_container {
     display: flex;
+    position: relative;
     max-width: 1560px;
     min-width: 1100px;
-
+    background-color: white;
+    
     .menu_container {
         width: 19%;
     }

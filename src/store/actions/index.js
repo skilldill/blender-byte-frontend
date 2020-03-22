@@ -1,5 +1,9 @@
 import { booksActions } from "./books";
+import { categoriesActions } from "./categories";
+import { bascketActions } from "./bascket";
 
 export {
-    booksActions
+    booksActions,
+    categoriesActions,
+    bascketActions
 }
