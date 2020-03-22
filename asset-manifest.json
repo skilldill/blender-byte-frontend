@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/blender-byte-frontend/static/css/main.90a5adfb.chunk.css",
-    "main.js": "/blender-byte-frontend/static/js/main.030b724c.chunk.js",
-    "main.js.map": "/blender-byte-frontend/static/js/main.030b724c.chunk.js.map",
+    "main.css": "/blender-byte-frontend/static/css/main.3ab6294b.chunk.css",
+    "main.js": "/blender-byte-frontend/static/js/main.de00e950.chunk.js",
+    "main.js.map": "/blender-byte-frontend/static/js/main.de00e950.chunk.js.map",
     "runtime-main.js": "/blender-byte-frontend/static/js/runtime-main.69d41389.js",
     "runtime-main.js.map": "/blender-byte-frontend/static/js/runtime-main.69d41389.js.map",
     "static/css/2.4b6e3ef2.chunk.css": "/blender-byte-frontend/static/css/2.4b6e3ef2.chunk.css",
-    "static/js/2.e281be7d.chunk.js": "/blender-byte-frontend/static/js/2.e281be7d.chunk.js",
-    "static/js/2.e281be7d.chunk.js.map": "/blender-byte-frontend/static/js/2.e281be7d.chunk.js.map",
+    "static/js/2.09f414f8.chunk.js": "/blender-byte-frontend/static/js/2.09f414f8.chunk.js",
+    "static/js/2.09f414f8.chunk.js.map": "/blender-byte-frontend/static/js/2.09f414f8.chunk.js.map",
     "index.html": "/blender-byte-frontend/index.html",
-    "precache-manifest.0bbcbd3ae9ee8f7824dfe5948493359b.js": "/blender-byte-frontend/precache-manifest.0bbcbd3ae9ee8f7824dfe5948493359b.js",
+    "precache-manifest.672318c6f9529c6ba9a6fbf5ccb98072.js": "/blender-byte-frontend/precache-manifest.672318c6f9529c6ba9a6fbf5ccb98072.js",
     "service-worker.js": "/blender-byte-frontend/service-worker.js",
     "static/css/2.4b6e3ef2.chunk.css.map": "/blender-byte-frontend/static/css/2.4b6e3ef2.chunk.css.map",
-    "static/css/main.90a5adfb.chunk.css.map": "/blender-byte-frontend/static/css/main.90a5adfb.chunk.css.map",
-    "static/js/2.e281be7d.chunk.js.LICENSE.txt": "/blender-byte-frontend/static/js/2.e281be7d.chunk.js.LICENSE.txt",
+    "static/css/main.3ab6294b.chunk.css.map": "/blender-byte-frontend/static/css/main.3ab6294b.chunk.css.map",
+    "static/js/2.09f414f8.chunk.js.LICENSE.txt": "/blender-byte-frontend/static/js/2.09f414f8.chunk.js.LICENSE.txt",
     "static/media/book_mock.png": "/blender-byte-frontend/static/media/book_mock.36c73926.png",
     "static/media/cookie.png": "/blender-byte-frontend/static/media/cookie.4491930a.png",
     "static/media/logo.svg": "/blender-byte-frontend/static/media/logo.df8b9341.svg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.69d41389.js",
     "static/css/2.4b6e3ef2.chunk.css",
-    "static/js/2.e281be7d.chunk.js",
-    "static/css/main.90a5adfb.chunk.css",
-    "static/js/main.030b724c.chunk.js"
+    "static/js/2.09f414f8.chunk.js",
+    "static/css/main.3ab6294b.chunk.css",
+    "static/js/main.de00e950.chunk.js"
   ]
 }
