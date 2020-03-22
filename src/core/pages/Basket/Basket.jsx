@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import {useSelector, useDispatch} from "react-redux";
-import { Button } from "antd";
+import { Button, Empty } from "antd";
 import "./style.scss";
 
 import { ROUTER_URLS } from "../../../shared/constants";
@@ -29,9 +29,7 @@ function BookInBasket(props) {
                 <h2>{book.FullName}, автор: {book.Author}</h2>
                 <p>{shortText(book.Description)}</p>
                 <div className="controls">
-                    <Button shape="round" type="primary" style={{marginRight: "10px"}}>
-                        Оформить заказ
-                    </Button>
+                    
                     <Button 
                         shape="round"
                         type="default"
@@ -72,11 +70,20 @@ export function Basket() {
                             />
                         )
                     }
+                    <div className="basket_control">
+                        <Button shape="round" type="primary">
+                            Оформить заказ
+                        </Button>
+                    </div>
                 </div>
             )
         }
 
-        return null;
+        return (
+            <div style={{marginTop: "50px"}}>
+                <Empty description="Корзина пуста" />
+            </div>
+        );
     }
 
     return (
