@@ -23,6 +23,41 @@ function LoadingCategories() {
     )
 }
 
+function ModalCategories(props) {
+    const { categories, fetchBooks, onClose } = props;
+    function renderCategories() {
+        if(categories.length) {
+            return (
+                <div className="categories_list">
+                    {
+                        categories.map((category, i) =>
+                            <Button 
+                                shape="round"
+                                key={`${i}-${category.id}`}
+                                size="large" 
+                                type="primary"
+                                onClick={() => fetchBooks(category.id)}
+                            >
+                                {category.name}
+                            </Button>
+                        )
+                    }
+                </div>
+            )
+        }
+
+        return null
+    }
+    return (
+        <div 
+            className="categories_modal"
+            onClick={ () => onClose && onClose() }
+        >
+            {renderCategories()}
+        </div>
+    )
+}
+
 export function Categories(props) {
     const { categories, loading, fetchCategories, fetchBooks } = props;
     const [showAll, setShowAll] = useState(false);
@@ -34,12 +69,7 @@ export function Categories(props) {
     function renderCategories() {
         if(categories.length) {
             let categoriesForRender = [];
-
-            if (categories.length > MAX_COUNT_RENDER && !showAll) {
-                categoriesForRender = categories.splice(0, MAX_COUNT_RENDER);
-            } else {
-                categoriesForRender = [...categories]
-            }
+            categoriesForRender = categories.slice(0, MAX_COUNT_RENDER);
 
             return (
                 <div className="categories_list">
@@ -66,16 +96,6 @@ export function Categories(props) {
                             Ещё...
                         </Button>)
                     }
-                    {showAll &&
-                        (<Button 
-                            shape="round"
-                            size="large"
-                            type="default"
-                            onClick={() => setShowAll(false)}
-                        >
-                            Скрыть
-                        </Button>)
-                    }
                 </div>
             )
         }
@@ -89,6 +109,13 @@ export function Categories(props) {
                 loading ?
                 <LoadingCategories /> :
                 renderCategories()
+            }
+            {   showAll && 
+                <ModalCategories 
+                    categories={categories}
+                    fetchBooks={fetchBooks}
+                    onClose={() => setShowAll(false)}
+                />
             }
         </div>
     )
