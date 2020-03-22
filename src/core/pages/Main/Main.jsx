@@ -7,6 +7,7 @@ import "./style.scss";
 import { booksActions } from "../../../store/actions";
 import { Header } from "../../components/Header";
 import { ROUTER_URLS } from "../../../shared/constants";
+import bubble from "../../../assets/bubble.png";
 
 const TAGS_CONTROLS = [
     { tag:"любовь", emoji: "💖" },
@@ -14,7 +15,7 @@ const TAGS_CONTROLS = [
     { tag:"приключения", emoji: "👣" },
     { tag:"бестселлер", emoji: "🌟" },
     { tag:"детектив", emoji: "🕵️" },
-    { tag:"английский", emoji: "🇬🇧" },
+    { tag:"дракон", emoji: "🐲" },
 ]
 
 export function EmojiControl() {
@@ -53,6 +54,14 @@ export function Main() {
                     <EmojiControl />
                 }
             />
+            <div className="main_body">
+                <p>
+                    При помощи искусственного интеллекта 
+                    мы собрали для тебя множество интересных книг по тематикам. 
+                    Выбери именно то, что итересно тебе нажав на соответствующий смайлик.
+                </p>
+                <img src={bubble} alt="шарик"/>
+            </div>
         </div>
     )
 }
