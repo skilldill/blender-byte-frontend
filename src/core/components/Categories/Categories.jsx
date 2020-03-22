@@ -24,7 +24,7 @@ function LoadingCategories() {
 }
 
 export function Categories(props) {
-    const { categories, loading, fetchCategories } = props;
+    const { categories, loading, fetchCategories, fetchBooks } = props;
     const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
@@ -45,7 +45,13 @@ export function Categories(props) {
                 <div className="categories_list">
                     {
                         categoriesForRender.map((category, i) =>
-                            <Button shape="round" key={`${i}-${category.id}`} size="large" type="primary">
+                            <Button 
+                                shape="round"
+                                key={`${i}-${category.id}`}
+                                size="large" 
+                                type="default"
+                                onClick={() => fetchBooks(category.id)}
+                            >
                                 {category.name}
                             </Button>
                         )
@@ -54,7 +60,7 @@ export function Categories(props) {
                         (<Button 
                             shape="round"
                             size="large"
-                            type="primary"
+                            type="default"
                             onClick={() => setShowAll(true)}
                         >
                             Ещё...
@@ -90,5 +96,7 @@ export function Categories(props) {
 
 Categories.propTypes = {
     categories: PropTypes.array,
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
+    fetchCategories: PropTypes.func,
+    fetchBooks: PropTypes.func
 }
