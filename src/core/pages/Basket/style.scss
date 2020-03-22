@@ -1,3 +1,16 @@
 .basket {
-    
+    position: relative;
+    background-color: white;
+
+    .book_in_basket {
+        display: flex;
+        border-bottom: 1px solid rgb(233, 233, 233);
+        margin: 20px;
+        padding-bottom: 5px;
+
+        img {
+            width: 150px;
+            margin-right: 20px;
+        }
+    }
 }
