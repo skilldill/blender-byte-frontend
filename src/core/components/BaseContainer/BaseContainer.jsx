@@ -7,6 +7,8 @@ import { Footer } from "../Footer";
 import { CookieModal } from "../CoockieModal";
 
 export function BaseContainer({ children }) {
+    const acceptCookie = localStorage.getItem("acceptCookie");
+
     return (
         <div className="base_container">
             <div className="menu_container">
@@ -16,7 +18,7 @@ export function BaseContainer({ children }) {
                 { children }
                 <Footer />
             </div>
-            <CookieModal />
+            { !acceptCookie && <CookieModal /> }
         </div>
     )
 }

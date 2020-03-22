@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from 'react-redux'
 import PropTypes from "prop-types";
+import {Tag} from "antd";
 
 import "./style.scss";
 import { ROUTER_URLS } from "../../../shared/constants";
@@ -27,6 +29,8 @@ CustomLink.propTypes = {
 }
 
 export function SideMenu() {
+    const bascket = useSelector((state) => state.bascket);
+
     return (
         <div className="side_menu">
             <nav>
@@ -51,6 +55,11 @@ export function SideMenu() {
                     <li className="menu_item">
                         <CustomLink to={ROUTER_URLS.CONTACTS}>
                             Контакты
+                        </CustomLink>
+                    </li>
+                    <li className="menu_item">
+                        <CustomLink to={ROUTER_URLS.BASKET}>
+                            В корзине <b>{bascket.books.length}</b> книг
                         </CustomLink>
                     </li>
                 </ul>

@@ -1,3 +1,33 @@
 .book {
-    
+    position: relative;
+    background-color: white;
+
+    .loading_book {
+        text-align: center;
+        margin-top: 130px;
+    }
+
+    .book_title {
+        background-color: #ffffff8c;
+        margin: 0;
+        font-size: 60px;
+        padding: 10px;
+    }
+}
+
+.book_poster {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+
+    img {
+        transform: translateY(-30%);
+        width: 100%;
+        transition: all .3s;
+
+        &:hover {
+            transform: translateY(-30%) scale(1.1);
+            transition: all .3s;
+        }
+    }
 }

@@ -1,3 +1,72 @@
 .main {
     position: relative;
+    background-color: white;
+
+    .main_body {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 70px;
+
+
+        p {
+            width: 370px;
+            font-size: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
+            height: 220px;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translateY(20px);
+            }
+
+            25% {
+                transform: translateY(-20px);
+            }
+
+            50% {
+                transform: translateY(20px);
+            }
+
+            75% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        img {
+            animation: fly 10s infinite 2s;
+        }
+    }
+}
+
+.emoji_constrol {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
+
+    .emoji {
+        font-size: 60px;
+        cursor: pointer;
+        transition: all .3s;
+        height: 94px;
+        width: 60px;
+
+        &:hover {
+            font-size: 65px;
+            transition: all .3s;
+        }
+    }
+
+
+    
 }
