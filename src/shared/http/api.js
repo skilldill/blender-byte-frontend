@@ -25,6 +25,11 @@ class Api {
         const query = API_URLS.BOOKS.replace(":id", typeId);
         return httpClient.get(query);
     }
+
+    findByWord(query) {
+        const params = { key: query };
+        return httpClient.get(API_URLS.FIND_BY_WORD, { params });
+    }
 }
 
 export const api = new Api();

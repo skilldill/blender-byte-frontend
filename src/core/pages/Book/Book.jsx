@@ -51,6 +51,7 @@ function BookContent(props) {
                 className="description"
                 style={{ padding: "20px" }}
             >
+                <h2>{book.FullName}</h2>
                 <h3>Автор: {book.Author}</h3>
                 <p>{book.Description}</p>
                 <div>
@@ -92,7 +93,7 @@ export function Book() {
         <div className="book">
             <Header title={
                 book ? 
-                <h2 className="book_title">{book.FullName}</h2> :
+                "" :
                 <LoadingBook />
                 }
             >

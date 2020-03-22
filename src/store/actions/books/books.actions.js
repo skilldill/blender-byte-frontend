@@ -24,6 +24,19 @@ class BooksActions {
             dispatch(this.setLoadingStatus(LOADING_SATUSES.NONE));
         }
     }
+
+    fetchBooksByQuery = (query) => async (dispatch) => {
+        dispatch(this.setLoadingStatus(LOADING_SATUSES.LOADING));
+        
+        try {
+            const response = await api.findByWord(query);
+            dispatch(this.setBooks(response.data));
+        } catch(error) {
+            dispatch(this.setErrorMessage(error.message));
+        } finally {
+            dispatch(this.setLoadingStatus(LOADING_SATUSES.NONE));
+        }
+    }
 }
 
 export const booksActions = new BooksActions();

@@ -13,7 +13,8 @@ export const API_URLS = {
     BOOKS_IDS: "/types/:id/",
     BOOKS: "/types/:id/books/",
     BOOK: "/books/:id/",
-    COUNT_BOOKS: "/types/:id/count/"
+    COUNT_BOOKS: "/types/:id/count/",
+    FIND_BY_WORD: "https://blender-byte-soayddqssa-uc.a.run.app/v1.0/find/"
 }
 
 export const LOADING_SATUSES = {
