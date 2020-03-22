@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Card, Skeleton, Button } from "antd";
 import { ShoppingOutlined } from "@ant-design/icons"
+import { Link } from "react-router-dom";
 
 import bookMock from "../../../assets/book_mock.png";
 import "./style.scss";
+import { ROUTER_URLS } from "../../../shared/constants";
 
 function MockBook() {
     return (
@@ -97,7 +99,9 @@ export function BooksTable(props) {
             return (
                 <div className="books_blocks">
                     { books.map((book, i) => 
-                        <BookCard key={i} book={book} onAddBascket={updateBascket} />
+                        <Link to={`${ROUTER_URLS.BOOK}/${book.ID}`} key={i}>
+                            <BookCard book={book} onAddBascket={updateBascket} />
+                        </Link>
                     ) }
                 </div>
             )
