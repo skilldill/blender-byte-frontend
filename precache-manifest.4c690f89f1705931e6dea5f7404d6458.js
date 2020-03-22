@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7e6306950d49062e7dd82c5214bda29",
+    "revision": "1845ae296a37b14b4e6bb5b321fd1418",
     "url": "/blender-byte-frontend/index.html"
   },
   {
-    "revision": "5dbeed788e61df44afaa",
+    "revision": "ac7e7c16a6cd573e9c19",
     "url": "/blender-byte-frontend/static/css/2.4b6e3ef2.chunk.css"
   },
   {
-    "revision": "fc8702381f03dd15d934",
-    "url": "/blender-byte-frontend/static/css/main.3ab6294b.chunk.css"
+    "revision": "3b9f0b43d0adc06272e9",
+    "url": "/blender-byte-frontend/static/css/main.5e1a55c3.chunk.css"
   },
   {
-    "revision": "5dbeed788e61df44afaa",
-    "url": "/blender-byte-frontend/static/js/2.1b722daa.chunk.js"
+    "revision": "ac7e7c16a6cd573e9c19",
+    "url": "/blender-byte-frontend/static/js/2.8fb18625.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/blender-byte-frontend/static/js/2.1b722daa.chunk.js.LICENSE.txt"
+    "url": "/blender-byte-frontend/static/js/2.8fb18625.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fc8702381f03dd15d934",
-    "url": "/blender-byte-frontend/static/js/main.a7a9449e.chunk.js"
+    "revision": "3b9f0b43d0adc06272e9",
+    "url": "/blender-byte-frontend/static/js/main.4106ae76.chunk.js"
   },
   {
     "revision": "781edf7584367bcf240b",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "36c739260e5ac5ab6a4d2e2c2823318c",
     "url": "/blender-byte-frontend/static/media/book_mock.36c73926.png"
+  },
+  {
+    "revision": "664d9446bcb41ad3d482fb822eab2f68",
+    "url": "/blender-byte-frontend/static/media/bubble.664d9446.png"
   },
   {
     "revision": "4491930aa85dad3f8cab8e2f7af85190",
