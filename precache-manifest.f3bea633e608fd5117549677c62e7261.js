@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2a3ab55973487c64932648232fa72058",
+    "revision": "94b5796304e6a5e5267ebfcd209fa920",
     "url": "/blender-byte-frontend/index.html"
   },
   {
