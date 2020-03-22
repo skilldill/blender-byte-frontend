@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2a6b8b164312a790ef1e4154c2aac4df",
+    "revision": "014d3ba843acb0164bb668eca68b89bc",
     "url": "/blender-byte-frontend/index.html"
   },
   {
-    "revision": "73e1ec6f4e98af954dc1",
+    "revision": "9a66f8813c5eda05756f",
     "url": "/blender-byte-frontend/static/css/2.4b6e3ef2.chunk.css"
   },
   {
-    "revision": "90cb5e89c2ad20fc9b53",
-    "url": "/blender-byte-frontend/static/css/main.9de684ff.chunk.css"
+    "revision": "1dd36a6aef0f1dbf667e",
+    "url": "/blender-byte-frontend/static/css/main.4ab9e06f.chunk.css"
   },
   {
-    "revision": "73e1ec6f4e98af954dc1",
-    "url": "/blender-byte-frontend/static/js/2.5458820e.chunk.js"
+    "revision": "9a66f8813c5eda05756f",
+    "url": "/blender-byte-frontend/static/js/2.3f93db9e.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/blender-byte-frontend/static/js/2.5458820e.chunk.js.LICENSE.txt"
+    "url": "/blender-byte-frontend/static/js/2.3f93db9e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "90cb5e89c2ad20fc9b53",
-    "url": "/blender-byte-frontend/static/js/main.9186cd75.chunk.js"
+    "revision": "1dd36a6aef0f1dbf667e",
+    "url": "/blender-byte-frontend/static/js/main.b213352f.chunk.js"
   },
   {
     "revision": "781edf7584367bcf240b",
