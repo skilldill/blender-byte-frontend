@@ -18,6 +18,7 @@ function BookInBasket(props) {
             <img 
                 src={!loaded ? bookMock : book.Photo}
                 alt={`книга ${book.FullName}`}
+                height={215}
                 onLoad={() => setLoaded(true)}
             />
             <div className="description">
