@@ -4,11 +4,8 @@ import { Input } from "antd";
 import "./style.scss";
 
 import { booksActions } from "../../../store/actions";
-import { api } from "../../../shared/http";
 import { Header } from "../../components/Header";
-import { SearchForm } from "../../components/SearchForm";
 import { CategoriesContainer, BooksTableContainer } from "../../containers";
-import { BooksTable } from "../../components/BooksTable";
 
 export function Shop() {
     const [query, setQuery] = useState();

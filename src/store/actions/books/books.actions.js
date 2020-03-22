@@ -37,6 +37,19 @@ class BooksActions {
             dispatch(this.setLoadingStatus(LOADING_SATUSES.NONE));
         }
     }
+
+    fetchBooksByTag = (tag) => async (dispatch) => {
+        dispatch(this.setLoadingStatus(LOADING_SATUSES.LOADING));
+        
+        try {
+            const response = await api.findByTag(tag);
+            dispatch(this.setBooks(response.data));
+        } catch(error) {
+            dispatch(this.setErrorMessage(error.message));
+        } finally {
+            dispatch(this.setLoadingStatus(LOADING_SATUSES.NONE));
+        }
+    }
 }
 
 export const booksActions = new BooksActions();

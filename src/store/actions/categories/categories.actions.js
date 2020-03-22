@@ -13,7 +13,8 @@ class CategoriesActions {
     selectCategories = createAction(this.SELECT_CATEGORIES);
     setLoadingStatus = createAction(this.SET_LOADING_STATUS);
 
-    fetchCategories = () => async (dispatch) => {
+    fetchCategories = () => async (dispatch, getState) => {
+        const booksState = getState().books;
         dispatch(this.setLoadingStatus(LOADING_SATUSES.LOADING));
         
         try {
@@ -22,7 +23,7 @@ class CategoriesActions {
 
             // TODO: необходимо для показа первых изображений, но потом нужно убрать
             const rendomCategoryId = response.data[0].id;
-            dispatch(booksActions.fetchBooks(rendomCategoryId));
+            !booksState.books.length && dispatch(booksActions.fetchBooks(rendomCategoryId));
         } catch(error) {
             console.log(error.message);
         } finally {

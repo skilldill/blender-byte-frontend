@@ -11,10 +11,11 @@ export const API_URLS = {
     BASE_URL: process.env.REACT_APP_BASE_API_URL,
     TYPES: "/types/",
     BOOKS_IDS: "/types/:id/",
-    BOOKS: "/types/:id/books/",
+    BOOKS: "/types/:id/books/?count=30&page=0",
     BOOK: "/books/:id/",
     COUNT_BOOKS: "/types/:id/count/",
-    FIND_BY_WORD: "https://blender-byte-soayddqssa-uc.a.run.app/v1.0/find/"
+    FIND_BY_WORD: "/find/",
+    FIND_BY_TAG: "/find_tag/"
 }
 
 export const LOADING_SATUSES = {

@@ -30,6 +30,11 @@ class Api {
         const params = { key: query };
         return httpClient.get(API_URLS.FIND_BY_WORD, { params });
     }
+
+    findByTag(tag) {
+        const params = { key: tag };
+        return httpClient.get(API_URLS.FIND_BY_TAG, { params });
+    }
 }
 
 export const api = new Api();
