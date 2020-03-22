@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Redirect } from "react-router-dom";
+import { Tooltip } from "antd"
 
 import "./style.scss";
 import { booksActions } from "../../../store/actions";
@@ -28,13 +29,15 @@ export function EmojiControl() {
     return (
         <div className="emoji_constrol">
             { TAGS_CONTROLS.map((control, i) => 
-                <div 
-                    key={`${i}.${control.tag}`}
-                    className="emoji"
-                    onClick={() => handleClick(control.tag)}
-                >
-                    {control.emoji}
-                </div>
+                <Tooltip placement="bottom" title={control.tag}>
+                    <div 
+                        key={`${i}.${control.tag}`}
+                        className="emoji"
+                        onClick={() => handleClick(control.tag)}
+                    >
+                        {control.emoji}
+                    </div>
+                </Tooltip>
             ) }
             { currentTag && <Redirect to={ROUTER_URLS.SHOP} /> }
         </div>
