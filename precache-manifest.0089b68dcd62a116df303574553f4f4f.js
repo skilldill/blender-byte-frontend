@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "961bc957e5e44005e2ac769ddcede1d7",
+    "revision": "dca6420dab51e4d98679737cf2ef35cc",
     "url": "/blender-byte-frontend/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blender-byte-frontend/static/css/2.4b6e3ef2.chunk.css"
   },
   {
-    "revision": "943e9d666a6434b5fef8",
-    "url": "/blender-byte-frontend/static/css/main.182b54e1.chunk.css"
+    "revision": "e424b251ab585db999ec",
+    "url": "/blender-byte-frontend/static/css/main.46dbe655.chunk.css"
   },
   {
     "revision": "658cf48a8a565ec1387f",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blender-byte-frontend/static/js/2.207b2208.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "943e9d666a6434b5fef8",
-    "url": "/blender-byte-frontend/static/js/main.0110b28f.chunk.js"
+    "revision": "e424b251ab585db999ec",
+    "url": "/blender-byte-frontend/static/js/main.6d12c08a.chunk.js"
   },
   {
     "revision": "781edf7584367bcf240b",
