@@ -1,4 +1,7 @@
 .book {
+    position: relative;
+    background-color: white;
+
     .loading_book {
         text-align: center;
         margin-top: 130px;
@@ -9,7 +12,6 @@
         margin: 0;
         font-size: 60px;
         padding: 10px;
-       
     }
 }
 

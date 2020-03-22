@@ -3,9 +3,7 @@ import { bascketActions } from "../../actions";
 
 //Initial check bascket
 
-const booksBascket = localStorage.getItem("basket")
-
-console.log(booksBascket);
+const booksBascket = localStorage.getItem("basket");
 
 const initialState = {
     books: booksBascket ? JSON.parse(booksBascket) : [],

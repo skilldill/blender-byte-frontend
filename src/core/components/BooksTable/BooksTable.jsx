@@ -34,7 +34,9 @@ function BookCard(props) {
     const [loadedData, setLoadedData] = useState(false);
     const { Meta } = Card;
 
-    function handleClick() {
+    function handleClick(event) {
+        event.stopPropagation();
+
         const userBascket = localStorage.getItem("basket");
         if (userBascket) {
             const bascketBooks = JSON.parse(userBascket);
@@ -52,21 +54,30 @@ function BookCard(props) {
         <Card
             hoverable
             style={{ width: 240, margin: 20 }}
-            onClick={handleClick}
             cover={
                 <div style={{ overflow: "hidden", height: "330px" }}>
-                    <img 
-                        src={!loadedData ? bookMock : book.Photo} 
-                        alt="книга" 
-                        width={240}
-                        onLoad={() => setLoadedData(true)}
-                    />
+                    <Link to={`${ROUTER_URLS.BOOK}/${book.ID}`}>
+                        <img 
+                            src={!loadedData ? bookMock : book.Photo} 
+                            alt="книга" 
+                            width={240}
+                            onLoad={() => setLoadedData(true)}
+                        />
+                    </Link>
                 </div>
             }
         >
-            <Meta title={book.FullName} description={book.Author} />
+            <Link to={`${ROUTER_URLS.BOOK}/${book.ID}`}>
+                <Meta title={book.FullName} description={book.Author} />
+            </Link>
             <div style={{ display: "flex", marginTop: "5px", justifyContent: "flex-end" }}>
-                <Button type="primary" shape="circle" icon={<ShoppingOutlined />} size="middle" />
+                <Button 
+                    type="primary" 
+                    shape="circle" 
+                    icon={<ShoppingOutlined />} 
+                    size="middle"
+                    onClick={handleClick}
+                />
             </div>
         </Card>
     )
@@ -99,9 +110,7 @@ export function BooksTable(props) {
             return (
                 <div className="books_blocks">
                     { books.map((book, i) => 
-                        <Link to={`${ROUTER_URLS.BOOK}/${book.ID}`} key={i}>
-                            <BookCard book={book} onAddBascket={updateBascket} />
-                        </Link>
+                        <BookCard key={i} book={book} onAddBascket={updateBascket} />
                     ) }
                 </div>
             )
