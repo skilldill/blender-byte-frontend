@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/blender-byte-frontend/precache-manifest.0089b68dcd62a116df303574553f4f4f.js"
+  "/blender-byte-frontend/precache-manifest.17b0c976e0325c1ecd9fda01f109d464.js"
 );
 
 self.addEventListener('message', (event) => {
