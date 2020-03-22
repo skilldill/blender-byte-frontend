@@ -18,6 +18,7 @@ export function Shop() {
     function handleSubmit(event) {
         event.preventDefault();
         dispatch(booksActions.fetchBooksByQuery(query));
+        setQuery("");
     }
 
     return (
@@ -29,6 +30,7 @@ export function Shop() {
                         <Search 
                             size="large"
                             placeholder="Начните вводить название книги"
+                            value={query}
                             onChange={(event) => setQuery(event.currentTarget.value)}
                         />
                     </form>

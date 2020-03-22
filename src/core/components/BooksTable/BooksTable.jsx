@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Card, Skeleton, Button } from "antd";
 import { ShoppingOutlined } from "@ant-design/icons"
 import { Link } from "react-router-dom";
+import { Empty } from "antd";
 
 import bookMock from "../../../assets/book_mock.png";
 import "./style.scss";
@@ -115,7 +116,7 @@ export function BooksTable(props) {
                 </div>
             )
         }
-        return null;
+        return <Empty description="По вашемо запросу ничего не найдено" />;
     }
 
     return (
