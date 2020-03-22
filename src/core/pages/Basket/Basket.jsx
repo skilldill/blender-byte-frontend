@@ -4,10 +4,12 @@ import {useSelector, useDispatch} from "react-redux";
 import { Button } from "antd";
 import "./style.scss";
 
+import { ROUTER_URLS } from "../../../shared/constants";
 import bookMock from "../../../assets/book_mock.png";
 import { shortText } from "../../../shared/utils";
 import { Header } from "../../components/Header";
 import { bascketActions } from "../../../store/actions";
+import { Link } from "react-router-dom";
 
 function BookInBasket(props) {
     const [loaded, setLoaded] = useState(false);
@@ -15,12 +17,14 @@ function BookInBasket(props) {
 
     return (
         <div className="book_in_basket">
-            <img 
-                src={!loaded ? bookMock : book.Photo}
-                alt={`книга ${book.FullName}`}
-                height={215}
-                onLoad={() => setLoaded(true)}
-            />
+            <Link to={`${ROUTER_URLS.BOOK}/${book.ID}`}>
+                <img 
+                    src={!loaded ? bookMock : book.Photo}
+                    alt={`книга ${book.FullName}`}
+                    height={215}
+                    onLoad={() => setLoaded(true)}
+                />
+            </Link>
             <div className="description">
                 <h2>{book.FullName}, автор: {book.Author}</h2>
                 <p>{shortText(book.Description)}</p>
